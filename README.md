@@ -31,15 +31,17 @@ provided.  You can run these individually or all at once.
 
 # Server code
 
-The html is not nessecary for the package to function, 
-but a configured webserver to support the CGI and also to serve 
-cutoff files is required to setup your own server. If you need 
-access to unsupported organisms or just want .  
+The cgi script is required to allow requests.  Configure using 
+documentation for your web server.  Note you will need to edit
+multimir_univ.pl with your database connection details. The html
+is not nessecary for the package to function, but the html folder of the 
+webserver will need to contain the cutoff files generated at 
+the end of loading the database.
 
 ## Steps to setup a server
   1. Install a Web Server(Apache recommended).
   1. Setup a database server(MySQL recommeded).
   1. Run database code to setup/load database tables.
-  1. Setup and test the cgi and cutoff files.
+  1. Setup and test the cgi and cutoff files(edit db connection details etc).
   1. Setup R package and change the URL to point to your server.
   
