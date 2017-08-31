@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<title>multiMiR</title>
+</head>
+
+<style>
+  {font-family:Arial}
+  table, th, td
+  {border:1px solid lightblue}
+  tr.updated td{background: #CECECE;}
+</style>
+
+<body>
+
+<a href="http://www.ucdenver.edu/academics/colleges/medicalschool/centers/cancercenter/Pages/CancerCenter.aspx"><img alt="University of Colorado Cancer Center, A National Cancer Institute-designated Comprehensive Cancer Center" src="uccc_NCI_564x78.png" /></a>
+
+<p align="center" style="background-color:#444444">
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:16pt;color:white">
+The multiMiR R package and database:
+<br>
+</font>
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:14pt;color:white">
+Integration of microRNA-target interactions along with their disease and drug associations
+<br>
+</font>
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:11pt;color:white">
+(<a href="http://nar.oxfordjournals.org/content/early/2014/07/24/nar.gku631" style="text-decoration:none;color:rgb(255,255,255)"><font color="white">Nucleic Acids Res. 2014 Jul 24. pii: gku631</font></a>)
+</font>
+</p>
+
+<table style="border:white"><tr><td style="border:white">
+<p align="left" style="background-color:#444444"><font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:12pt;color:white">Summary</font></p>
+microRNAs (miRNAs) regulate expression by promoting degradation or repressing translation of target transcripts. miRNA target sites have been catalogued in databases based on experimental validation and computational prediction using a variety of algorithms. Several online resources provide collections of multiple databases but need to be imported into other software, such as R, for processing, tabulation, graphing and computation. Currently available miRNA target site packages in R are limited in the number of databases, types of databases and flexibility. <br /><br />The R package multiMiR, with web server at <a href="http://multimir.ucdenver.edu">http://multimir.ucdenver.edu</a>, is a comprehensive collection of predicted and validated miRNA-target interactions and their associations with diseases and drugs. 
+</td>
+<td style="border:white"><img alt="" height="250" src="miRNA-1.jpg" width="250" style="border:0px solid" /></td>
+</tr></table>
+
+
+<p align="left" style="background-color:#444444"><font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:12pt;color:white">Features</font></p>
+<div>multiMiR includes several novel features not available in existing R packages:</div>
+
+<div><ol><li>Compilation of nearly 50 million records from 14 different databases, more than any other collection</li>
+<li>Expansion of databases to those based on disease annotation and drug response, in addition to many experimental and computational databases</li>
+<li>User-defined cutoffs for predicted binding strength to provide the most confident selection</li>
+<li>Package enables retrieval of miRNA-target interactions from 14 external databases in R without the need to visit all these databases</li>
+<li>Advanced users can also submit SQL queries to the web server to retrieve results</li></ol></div>
+
+<div align="center">
+<h2>Database v2.2 - updated 8/8/2017</h2>
+<table style="border:solid thin lightblue" width="100%">
+<tr align="center" valign="center"><th>Category</th><th>External Database</th><th>Version</th><th>Last Update</th><th>Human Records</th><th>Mouse Records</th><th>Rat Records</th><th>Total Records</th></tr>
+<tr align="center" valign="center" ><td rowspan="3">Validated miRNA-target Interactions</td><td><a href="http://mirecords.biolead.org/download.php">miRecords</a></td><td>4</td><td>Apr 27, 2013</td><td>2425</td><td>449</td><td>171</td><td>3045</td></tr>
+<tr align="center" valign="center" ><td><a href="http://mirtarbase.mbc.nctu.edu.tw/php/download.php">miRTarBase</a></td><td>6.1</td><td>Sept, 2015</td><td>440040</td><td>48731</td><td>470</td><td>489281</td></tr>
+<tr align="center" valign="center"><td><a href="http://diana.imis.athena-innovation.gr/DianaTools/index.php?r=tarbase/index">TarBase</a></td><td>6</td><td>2012</td><td>23447</td><td>9024</td><td>67</td><td>32538</td></tr>
+<tr align="center" valign="center"><td rowspan="8">Predicted miRNA-target Interactions</td><td><a href="http://diana.cslab.ece.ntua.gr/data/public/">DIANA-microT-CDS</a></td><td>5</td><td>Sept, 2013</td><td>7664602</td><td>3747171</td><td>0</td><td>11411773</td></tr>
+<tr align="center" valign="center"><td><a href="http://www.mirz.unibas.ch/miRNAtargetPredictionBulk.php">ElMMo</a></td><td>5</td><td>Jan, 2011</td><td>3959112</td><td>1449133</td><td>547191</td><td>5955436</td></tr>
+<tr align="center" valign="center"><td><a href="http://www.ebi.ac.uk/enright-srv/microcosm/cgi-bin/targets/v5/download.pl">MicroCosm</a></td><td>5</td><td>Sept, 2009</td><td>762987</td><td>534735</td><td>353378</td><td>1651100</td></tr>
+<tr align="center" valign="center"><td><a href="http://www.microrna.org/microrna/getDownloads.do">miRanda</a></td><td>N/A</td><td>Aug, 2010</td><td>5429955</td><td>2379881</td><td>247368</td><td>8057204</td></tr>
+<tr align="center" valign="center" ><td><a href="http://mirdb.org">miRDB</a></td><td>5</td><td>Aug, 2014</td><td>1124831</td><td>654192</td><td>195136</td><td>1974159</td></tr>
+<tr align="center" valign="center"><td><a href="http://dorina.mdc-berlin.de">PicTar</a></td><td>2</td><td>Dec 21, 2012</td><td>404066</td><td>302236</td><td>0</td><td>706302</td></tr>
+<tr align="center" valign="center"><td><a href="http://genie.weizmann.ac.il/pubs/mir07/mir07_data.html">PITA</a></td><td>6</td><td>Aug 31, 2008</td><td>7710936</td><td>5163153</td><td>0</td><td>12874089</td></tr>
+<tr align="center" valign="center" class="updated"><td><a href="http://www.targetscan.org/cgi-bin/targetscan/data_download.cgi?db=vert_61">TargetScan</a></td><td>7.1</td><td>Jun, 2016</td><td>13801621</td><td>10452055</td><td>0</td><td>24253676</td></tr>
+
+<tr align="center" valign="center"><td rowspan="3">miRNA-disease/drug Associations</td><td><a href="http://www.mir2disease.org">miR2Disease</a></td><td>N/A</td><td>Mar 14, 2011</td><td>2875</td><td>0</td><td>0</td><td>2875</td></tr>
+<tr align="center" valign="center"><td><a href="http://www.pharmaco-mir.org/home/download_VERSE_db">Pharmaco-miR (Verified Sets)</a></td><td>N/A</td><td>N/A</td><td>308</td><td>5</td><td>0</td><td>313</td></tr>
+<tr align="center" valign="center"><td><a href="http://mips.helmholtz-muenchen.de/phenomir/">PhenomiR</a></td><td>2</td><td>Feb 15, 2011</td><td>15138</td><td>491</td><td>0</td><td>15629</td></tr>
+</table><BR>
+<a href="http://multimir.ucdenver.edu/verinfo.html"> Previous Database Versions</a>
+</div>
+
+<p align="left" style="background-color:#444444"><font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:12pt;color:white">Software</font></p>
+
+<table style="border:solid thin lightblue" border=0 width="100%" cellpadding=10>
+  <tr>
+    <th>Download</th>
+    <th>Installation</th>
+    <th>Documentation</th>
+  </tr>
+  <tr>
+    <td><div>The current version of the multiMiR R Package is 0.99.5 and can be downloaded from</div>
+        <div><a href="https://github.com/KechrisLab/multiMiR">GitHub</a>.</div><BR><BR>
+        <div>
+        Note: The version of the R package and Database have been seperated.  The R package has <BR>
+        been set back to 0.99 while the Database will continue from v2.1.  The R package will now <BR>
+        allow you to choose pevious database versions if desired to reproduce previous results.</div>
+    </td>
+    <td><div>multiMiR requires the XML and RCurl packages from R. The packages can be installed from R by typing:</div>
+        <div><em>install.packages("XML")</em></div>
+        <div><em>install.packages("RCurl")</em></div><BR>
+        <div># To install multiMiR, first install suggested package BiocStyle</div>
+        <div><em>source("https://bioconductor.org/biocLite.R")</em></div>
+        <div><em>biocLite()</em></div>
+        <div><em>biocLite("BiocStyle")</em></div>
+        <BR>
+        <div># Now install devtools (for installing from GitHub repositories)</div>
+        <div><em>install.packages("devtools")</em></div>
+        <div><em>library(devtools)</em></div>
+        <BR>
+        <div># Now install the development version of the multiMiR package</div>
+        <div><em>devtools::install_github("kechrislab/multimir", build_vignettes = TRUE)</em></div>
+    </td>
+    <td><div>multiMiR is distributed with a User’s Guide illustrating examples of package functions and queries.</div>
+        <br>
+        <div>The User's Guide can be downloaded <a href="http://multimir.ucdenver.edu/multiMiR_0.99.3.pdf">here</a> or viewed from R by typing:</div>
+        <div><em>vignette("multiMiR")</em></div></td>
+  </tr>
+</table>
+
+<br>
+<div><a href="http://multimir.ucdenver.edu/info.html">More information about this version and previous versions.</a></div></td>
+
+<h4 class="mv-Element-H4">Feature Request/Bug Report:</h4>
+<div>If there is a feature you would like to suggest, or a bug you would like to report, please submit an issue through <a href="https://github.com/KechrisLab/multiMiR/issues">GitHub</a>.</div>
+
+<p align="left" style="background-color:#444444"><font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:12pt;color:white">Contributors</font></p>
+<div>multiMiR is developed by <a href="http://www.linkedin.com/in/yuanbinru">Yuanbin Ru</a> at <a href="http://www.biomarin.com">BioMarin Pharmaceutical Inc.</a>,
+Matt Mulvahill, Spencer Mahaffey,
+& <a href="http://csph.ucdenver.edu/Sites/Kechris">Katerina Kechris</a> at <a href="http://www.ucdenver.edu">the University of Colorado Denver</a>.</div>
+
+<p align="left" style="background-color:#444444"><font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:12pt;color:white">References</font></p>
+<div>If you use multiMiR, please cite</div>
+<br>
+<div>Yuanbin Ru*, Katerina J. Kechris*, Boris Tabakoff, Paula Hoffman, Richard A. Radcliffe, Russell Bowler, Spencer Mahaffey, Simona Rossi, George A. Calin, Lynne Bemis, and Dan Theodorescu. (2014) The multiMiR R package and database: integration of microRNA-target interactions along with their disease and drug associations. Nucleic Acids Research, doi: <a href="http://nar.oxfordjournals.org/content/early/2014/07/24/nar.gku631">10.1093/nar/gku631</a>. (* Equal contribution)</div>
+<div><ul><li>The microarray data in this paper can be downloaded from ArrayExpress (accession numbers <a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-2610/">E-MTAB-2610</a> and <a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-2611/">E-MTAB-2611</a>).</li>
+<li>The supplementary R code in the paper can be downloaded <a href="http://multimir.ucdenver.edu/Supplementary_R_Code.txt">here</a> or from the above link to our paper.</li>
+</ul></div>
+
+<br><br>
+</body>
+
+</html>

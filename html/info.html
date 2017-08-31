@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>multiMiR 2.1 information</title>
+</head>
+
+<style>
+  {font-family:Arial}
+  table, th, td
+  {border:1px solid lightblue}
+</style>
+
+<body>
+
+<a href="http://www.ucdenver.edu/academics/colleges/medicalschool/centers/cancercenter/Pages/CancerCenter.aspx"><img alt="University of Colorado Cancer Center, A National Cancer Institute-designated Comprehensive Cancer Center" src="uccc_NCI_564x78.png" /></a>
+
+<p align="center" style="background-color:#444444">
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:16pt;color:white">
+The multiMiR R package and database:
+<br>
+</font>
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:14pt;color:white">
+Integration of microRNA-target interactions along with their disease and drug associations
+<br>
+</font>
+<font style="font-family:Arial;font-weight:bold;font-style:italic;font-size:11pt;color:white">
+(<a href="http://nar.oxfordjournals.org/content/early/2014/07/24/nar.gku631" style="text-decoration:none;color:rgb(255,255,255)"><font color="white">Nucleic Acids Res. 2014 Jul 24. pii: gku631</font></a>)
+</font>
+</p>
+<h4 class="mv-Element-H4">multiMiR 0.99.5 information - <a href="https://github.com/KechrisLab/multiMiR">Download from GitHub</a></h4>
+<div>Changes from version 2.1.1 to version 0.99.5 (May 24, 2017)</div>
+<div>
+<ul>
+<li>Seperated R package version from database version. Thus the R package is now 0.99 while the database will continue from v2.1.</li>
+<li>Allow use of previous database versions from the package.  The package defaults to the most current database version, but a new function(multimir_switchDBVersion) allows switching to other available database versions.</li>
+<li>Internal changes to adhere to good coding practices and prepare for Bioconductor submission.</li>
+<li>Now download and submit issues and feature requests through <a href="https://github.com/KechrisLab/multiMiR">GitHub</a>.
+</ul>
+<h4 class="mv-Element-H4">multiMiR 2.1.1 information - <a href="http://multimir.ucdenver.edu/multiMiR_2.1.tar.gz">Download</a></h4>
+<div>Changes from version 2.1.0 to version 2.1.1 (Jan 11, 2017)</div>
+<div>
+<ul>
+<li>Added back large query bug fix</li>
+<li>Fixed documentation</li>
+<li>Fixed DB schema URL</li>
+</ul>
+</div>
+<h4 class="mv-Element-H4">multiMiR 2.1.0 information </h4>
+<div>Changes from version 2.0.1 to version 2.1 (Dec 22, 2016)</div>
+<div>
+<ul>
+<li>Updated the miRTarBase and miRDB data.</li>
+<li>Updated miRBase IDs to v21</li>
+</ul>
+</div>
+<h4 class="mv-Element-H4">multiMiR 2.0.1 information - <a href="http://multimir.ucdenver.edu/multiMiR_2.0.1.tar.gz">Download</a></h4>
+<div>Changes from version 2.0.0 to version 2.0.1 (Dec 8, 2016)</div>
+<div><ul><li>Changed the request function from GET to POST to allow submitting larger lists of genes or miRNAs.  <BR>Note: if you get a gateway timeout message the list is still too long to be processed in the 30 minute limit.  Please break up your list.</li>
+</ul></div>
+<h4 class="mv-Element-H4">multiMiR 2.0.0 information </h4>
+<div>Changes from version 1.0.1 to version 2.0.0 (May 7, 2015)</div>
+<div><ul><li>Added Rat data to the database and allowed searching rat in the R package.</li>
+</ul></div>
+<h4 class="mv-Element-H4">multiMiR 1.0.1 information - <a href="http://multimir.ucdenver.edu/multiMiR_1.0.1.tar.gz">Download</a></h4>
+<div>Changes from version 1.0.0 to version 1.0.1 (August 8, 2014)</div>
+<div><ul><li>In the multiMiR package, the package RCurl, instead of XML, was used to submit requests to the multiMiR web server and process the server's responses.</li>
+</ul></div>
+
+<br>
+<div>Version 1.0.0 was released on July 31, 2014.</div>
+
+</body>
+
+</html>
