@@ -1,0 +1,27 @@
+abbreviation	name	org.db	biomaRt.ensembl	biomaRt.plant	biomaRt.symbol	biomaRt.RefSeq
+ath	Arabidopsis thaliana	org.At.tair.db	NA	athaliana_eg_gene	tair_symbol	refseq_dna
+bmo	Bombyx mori	NA	NA	NA	NA	NA
+bta	Bos taurus	org.Bt.eg.db	btaurus_gene_ensembl	NA	wikigene_name	refseq_mrna
+cel	Caenorhabditis elegans	org.Ce.eg.db	celegans_gene_ensembl	NA	wikigene_name	refseq_mrna
+cfa	Canis lupus familiaris	org.Cf.eg.db	cfamiliaris_gene_ensembl	NA	wikigene_name	refseq_mrna
+dme	Drosophila melanogaster	org.Dm.eg.db	dmelanogaster_gene_ensembl	NA	flybasename_gene	refseq_mrna
+dre	Danio rerio	org.Dr.eg.db	drerio_gene_ensembl	NA	wikigene_name	refseq_mrna
+ebv	Epstein Barr virus	NA	NA	NA	NA	NA
+gga	Gallus gallus	org.Gg.eg.db	ggallus_gene_ensembl	NA	wikigene_name	refseq_mrna
+gma	Glycine max	NA	NA	gmax_eg_gene	external_gene_id	refseq_mrna
+hsa	Homo sapiens	org.Hs.eg.db	hsapiens_gene_ensembl	NA	hgnc_symbol	refseq_mrna
+hcmv	Human cytomegalovirus	NA	NA	NA	NA	NA
+hiv1	Human immunodeficiency virus 1	NA	NA	NA	NA	NA
+kshv	Kaposi sarcoma-associated herpesvirus	NA	NA	NA	NA	NA
+mdv1	Mareks disease virus	NA	NA	NA	NA	NA
+mmu	Mus musculus	org.Mm.eg.db	mmusculus_gene_ensembl	NA	mgi_symbol	refseq_mrna
+oar	Ovis aries	NA	NA	NA	NA	NA
+mtr	Medicago truncatula	NA	NA	NA	NA	NA
+osa	Oryza sativa	NA	NA	osativa_eg_gene	tigr_locus	refseq_dna
+ppt	Physcomitrella patens	NA	NA	ppatens_eg_gene	NA	refseq_mrna_predicted
+rno	Rattus norvegicus	org.Rn.eg.db	rnorvegicus_gene_ensembl	NA	rgd_symbol	refseq_mrna
+tva	Trichomonas vaginalis	NA	NA	NA	NA	NA
+vsiv	Vesicular stomatitis Indiana virus	NA	NA	NA	NA	NA
+vvi	Vitis vinifera	NA	NA	vvinifera_eg_gene	NA	refseq_mrna_predicted
+xla	Xenopus laevis	org.Xl.eg.db	NA	NA	NA	NA
+xtr	Xenopus tropicalis	NA	xtropicalis_gene_ensembl	NA	wikigene_name	NA
