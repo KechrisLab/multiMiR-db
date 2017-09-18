@@ -1,0 +1,15 @@
+drv = dbDriver("MySQL")
+con = dbConnect(drv, host=DB.HOST, user=DB.USER, password=DB.PASS, dbname=DB)
+multimir_cutoffs.all = get.multimir.cutoff(con=con, org=c('hsa','mmu','rno'))
+multimir_cutoffs.lo = get.multimir.cutoff.2(con=con, org=c('hsa','mmu','rno'), conserved.cut='low')
+multimir_cutoffs.hi = get.multimir.cutoff.2(con=con, org=c('hsa','mmu','rno'), conserved.cut='high')
+
+multimir_cutoffs = c(multimir_cutoffs.all, multimir_cutoffs.lo)
+save(multimir_cutoffs, file="multimir_cutoffs.conserved_cut_low.rda")
+multimir_cutoffs = c(multimir_cutoffs.all, multimir_cutoffs.hi)
+save(multimir_cutoffs, file="multimir_cutoffs.conserved_cut_high.rda")
+multimir_cutoffs = c(multimir_cutoffs.all, multimir_cutoffs.hi)
+save(multimir_cutoffs, file="multimir_cutoffs.rda")
+
+dbDisconnect(con)
+dbUnloadDriver(drv)
